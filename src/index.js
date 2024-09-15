@@ -1,14 +1,11 @@
-// src/index.js
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import { RouterProvider } from 'react-router-dom';
-import store from './redux/store';
-import router from './router/router';
+import { BrowserRouter as Router } from 'react-router-dom';
+import App from './App';
 
 ReactDOM.render(
-  <Provider store={store}>
-    <RouterProvider router={router} />
-  </Provider>,
+  <Router basename="/recuperatorio_modulo7">
+    <App />
+  </Router>,
   document.getElementById('root')
 );
