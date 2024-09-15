@@ -1,29 +1,17 @@
-// src/components/Navbar.js
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import './Navbar.css';
 
-const Navbar = () => {
-  const { user, email } = useSelector((state) => state);
-
+function Navbar() {
   return (
     <nav className="navbar">
       <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/product">Product</a></li>
-        <li><a href="/forms">Login</a></li>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/dictionary">Dictionary</Link></li>
+        <li><Link to="/login">Login</Link></li>
       </ul>
-      {user && email ? (
-        <div className="user-info">
-          Bienvenido {user}: {email}
-        </div>
-      ) : (
-        <div className="user-info">
-          Bienvenido
-        </div>
-      )}
     </nav>
   );
-};
+}
 
 export default Navbar;

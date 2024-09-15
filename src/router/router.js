@@ -1,29 +1,18 @@
-// src/router/router.js
-import { createBrowserRouter } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import App from '../App';
 import LandingPage from '../screens/LandingPage/LandingPage';
+import Dictionary from '../screens/Dictionary/Dictionary';
 import LoginForm from '../LoginForm';
-import Dictionary from '../screens/Dictionary/Dictionary'; // Importa el nuevo componente
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App />,
-    children: [
-      {
-        path: "/",
-        element: <LandingPage />,
-      },
-      {
-        path: "forms",
-        element: <LoginForm />,
-      },
-      {
-        path: "dictionary",
-        element: <Dictionary />, // Agrega la nueva ruta para Dictionary
-      },
-    ],
-  },
-]);
+const AppRouter = () => (
+  <Router basename="/recuperatorio_modulo7">
+    <Switch>
+      <Route exact path="/" component={LandingPage} />
+      <Route path="/dictionary" component={Dictionary} />
+      <Route path="/login" component={LoginForm} />
+      <Route component={NotFound} />
+    </Switch>
+  </Router>
+);
 
-export default router;
+export default AppRouter;
