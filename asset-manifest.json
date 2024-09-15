@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/recuperatorio_modulo7/static/css/main.84e672f9.css",
+    "main.js": "/recuperatorio_modulo7/static/js/main.500971fb.js",
+    "index.html": "/recuperatorio_modulo7/index.html",
+    "main.84e672f9.css.map": "/recuperatorio_modulo7/static/css/main.84e672f9.css.map",
+    "main.500971fb.js.map": "/recuperatorio_modulo7/static/js/main.500971fb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.84e672f9.css",
+    "static/js/main.500971fb.js"
+  ]
+}
